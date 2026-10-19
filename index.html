@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mommy to Bee — Baby Shower</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Nunito:wght@500;600;700;800&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Reusable small bee (no animated wings; the whole bee buzzes) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="bee" viewBox="0 0 120 100">
+      <ellipse cx="46" cy="30" rx="20" ry="26" fill="#DFF2FA" stroke="#2B2622" stroke-width="3" transform="rotate(-24 46 30)"/>
+      <ellipse cx="76" cy="26" rx="20" ry="26" fill="#DFF2FA" stroke="#2B2622" stroke-width="3" transform="rotate(24 76 26)"/>
+      <ellipse cx="60" cy="64" rx="34" ry="26" fill="#F9C22E" stroke="#2B2622" stroke-width="3.5"/>
+      <path d="M44 41v46M60 38v52M76 41v46" stroke="#2B2622" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M94 64l16 0" stroke="#2B2622" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="30" cy="58" r="3.2" fill="#2B2622"/>
+      <path d="M24 70q6 6 12 0" stroke="#2B2622" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M26 42q-6-12-14-14M34 40q-2-14-8-20" stroke="#2B2622" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ COVER ============ -->
+<div class="cover" id="coverPage" role="button" tabindex="0" aria-label="Tap to open your invitation">
+  <div class="cover-eyebrow">Something sweet is buzzing</div>
+
+  <svg class="cover-bee" viewBox="0 0 120 100" aria-hidden="true">
+    <ellipse class="wing-l" cx="46" cy="30" rx="20" ry="26" fill="#DFF2FA" stroke="#2B2622" stroke-width="3" transform="rotate(-24 46 30)"/>
+    <ellipse class="wing-r" cx="76" cy="26" rx="20" ry="26" fill="#DFF2FA" stroke="#2B2622" stroke-width="3" transform="rotate(24 76 26)"/>
+    <ellipse cx="60" cy="64" rx="34" ry="26" fill="#FFFFFF" stroke="#2B2622" stroke-width="3.5"/>
+    <ellipse cx="60" cy="64" rx="34" ry="26" fill="#F9C22E" stroke="#2B2622" stroke-width="3.5"/>
+    <path d="M44 41v46M60 38v52M76 41v46" stroke="#2B2622" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M94 64l16 0" stroke="#2B2622" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="30" cy="58" r="3.2" fill="#2B2622"/>
+    <path d="M24 70q6 6 12 0" stroke="#2B2622" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <path d="M26 42q-6-12-14-14M34 40q-2-14-8-20" stroke="#2B2622" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <h1>Mommy to Bee</h1>
+  <p class="cover-sub">Tap to open your baby shower invitation.</p>
+
+  <span class="cover-tap">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M9 5l7 7-7 7"/></svg>
+    Open invitation
+  </span>
+</div>
+
+<div id="mainContent">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <svg class="bee" style="top:11%; left:7%; width:64px;" viewBox="0 0 120 100" aria-hidden="true"><use href="#bee"/></svg>
+    <svg class="bee" style="top:20%; right:8%; width:50px; animation-delay:1.2s; animation-duration:6s;" viewBox="0 0 120 100" aria-hidden="true"><use href="#bee"/></svg>
+    <svg class="bee" style="bottom:20%; left:12%; width:44px; animation-delay:2.1s;" viewBox="0 0 120 100" aria-hidden="true"><use href="#bee"/></svg>
+
+    <div class="hero-eyebrow">You're invited</div>
+    <div class="script script-top">A baby shower for</div>
+    <h1>Mommy <em>to Bee</em></h1>
+    <p class="honoree">Please join us in honouring <strong>Thando</strong></p>
+
+    <a href="#details" class="scroll-cue" aria-label="Scroll to details">
+      Hive details
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </header>
+
+  <div class="wrap">
+
+    <!-- ============ COUNTDOWN ============ -->
+    <section id="details">
+      <div class="section-head">
+        <span class="kicker">Bzzz, almost time</span>
+        <h2>The party starts in…</h2>
+      </div>
+      <div class="countdown" id="countdown">
+        <div class="unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
+        <div class="unit"><span class="num" id="cd-hours">--</span><span class="lbl">Hours</span></div>
+        <div class="unit"><span class="num" id="cd-mins">--</span><span class="lbl">Mins</span></div>
+        <div class="unit"><span class="num" id="cd-secs">--</span><span class="lbl">Secs</span></div>
+      </div>
+      <p class="countdown-done" id="countdownDone" hidden>The shower is underway!</p>
+    </section>
+
+    <!-- ============ DETAILS ============ -->
+    <section style="padding-top:0;">
+      <div class="cards">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div>
+          <h3>Saturday, 5 December</h3>
+          <p>2026 — save the date!</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>2:00 PM – 5:00 PM</h3>
+          <p>Honey-sweet treats and good company.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <h3>The Garden Terrace</h3>
+          <p>24 Rosebank Lane, Johannesburg</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a5 5 0 019-3 5 5 0 019 3c-2 4.5-9 9-9 9z"/></svg></div>
+          <h3>Hosted by Naledi</h3>
+          <p>With love from family and friends.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT TO EXPECT ============ -->
+    <section style="padding-top:0;">
+      <div class="fun">
+        <h2>What's buzzing</h2>
+        <ul class="fun-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z" fill="currentColor" fill-opacity="0.25"/></svg>
+            Honey tasting bar
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z" fill="currentColor" fill-opacity="0.25"/></svg>
+            Guess the baby-food flavour game
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z" fill="currentColor" fill-opacity="0.25"/></svg>
+            Wishes and advice cards for the parents
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z" fill="currentColor" fill-opacity="0.25"/></svg>
+            High tea and honey cake at 3:30 PM
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ GIFT NOTE ============ -->
+    <section style="padding-top:0;">
+      <div class="note-card">
+        <h2>A little note on gifts</h2>
+        <p>Your presence is the sweetest gift. If you'd like to bring something for the little one, nappies and wipes are always welcome, and so is a book for baby's first library.</p>
+        <span class="script">With love, Thando &amp; family</span>
+      </div>
+    </section>
+
+    <!-- ============ RSVP ============ -->
+    <section class="rsvp" id="rsvp">
+      <div class="rsvp-card">
+        <h2>Will you bee there?</h2>
+        <p>Please let us know by 20 November so we can plan the treats.</p>
+        <button type="button" class="btn" id="openRsvp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6l8 6 8-6M4 6h16v12H4z"/></svg>
+          RSVP now
+        </button>
+        <p class="rsvp-note">Or call Naledi on (555) 010-1234</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>Made with love for our little honey bee.</footer>
+
+  <!-- ============ RSVP MODAL ============ -->
+  <div class="modal-overlay" id="rsvpOverlay" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+    <div class="modal">
+      <button type="button" class="modal-close" id="closeRsvp" aria-label="Close RSVP form">✕</button>
+
+      <form id="rsvpForm">
+        <h2 id="rsvpTitle">Will you bee there?</h2>
+        <p class="modal-sub">We can't wait to celebrate with you.</p>
+
+        <div class="field">
+          <label for="guestName">Your name</label>
+          <input type="text" id="guestName" name="guestName" placeholder="e.g. Jordan Smith" required>
+        </div>
+
+        <div class="field">
+          <label>Will you be there?</label>
+          <div class="attend-toggle">
+            <input type="radio" id="attendYes" name="attending" value="Yes" checked>
+            <label for="attendYes">Yes, I'll bee there</label>
+            <input type="radio" id="attendNo" name="attending" value="No">
+            <label for="attendNo">Can't make it</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="guestCount">Number attending (incl. you)</label>
+          <input type="number" id="guestCount" name="guestCount" min="1" max="10" value="1">
+        </div>
+
+        <div class="field">
+          <label for="guestNotes">Dietary needs or a message for mom-to-bee</label>
+          <textarea id="guestNotes" name="guestNotes" placeholder="Optional"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send RSVP</button>
+      </form>
+
+      <div class="modal-success" id="rsvpSuccess" hidden>
+        <h2>Thank you!</h2>
+        <p id="rsvpSuccessMsg">We've received your response.</p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /#mainContent -->
+<script src="script.js"></script>
+
+</body>
+</html>
